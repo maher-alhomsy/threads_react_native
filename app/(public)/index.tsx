@@ -51,11 +51,14 @@ const Page = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('@/assets/images/login.png')}
         style={styles.loginImage}
+        source={require('@/assets/images/login.png')}
       />
 
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.scrollContainer}
+      >
         <Text style={styles.title}>How would you like to use Threads?</Text>
 
         <View style={styles.buttonContainer}>
@@ -65,18 +68,21 @@ const Page = () => {
           >
             <View style={styles.loginButtonContent}>
               <Image
-                source={require('@/assets/images/instagram_icon.webp')}
                 style={styles.loginButtonImage}
+                source={require('@/assets/images/instagram_icon.webp')}
               />
+
               <Text style={styles.loginButtonText}>
                 Continue with Instagram
               </Text>
+
               <Ionicons
-                name="chevron-forward"
                 size={24}
                 color={Colors.border}
+                name="chevron-forward"
               />
             </View>
+
             <Text style={styles.loginButtonSubtitle}>
               Log in or create a THreads profile with your Instagram account.
               With a profile, you can post, interact and get personalised
@@ -90,10 +96,11 @@ const Page = () => {
           >
             <View style={styles.loginButtonContent}>
               <Text style={styles.loginButtonText}>Continue with Google</Text>
+
               <Ionicons
-                name="chevron-forward"
                 size={24}
                 color={Colors.border}
+                name="chevron-forward"
               />
             </View>
           </TouchableOpacity>
@@ -101,12 +108,14 @@ const Page = () => {
           <TouchableOpacity style={styles.loginButton}>
             <View style={styles.loginButtonContent}>
               <Text style={styles.loginButtonText}>Use without a profile</Text>
+
               <Ionicons
-                name="chevron-forward"
                 size={24}
                 color={Colors.border}
+                name="chevron-forward"
               />
             </View>
+
             <Text style={styles.loginButtonSubtitle}>
               You can browse Threads without a profile, but won't be able to
               post, interact or get personalised recommendations.
