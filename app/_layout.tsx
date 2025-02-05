@@ -6,7 +6,7 @@ import {
   DMSans_500Medium,
   DMSans_400Regular,
 } from '@expo-google-fonts/dm-sans';
-import { Stack } from 'expo-router';
+import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo';
 
@@ -29,11 +29,7 @@ const InitialLayout = () => {
     }
   }, [fontsLoaded]);
 
-  return (
-    <Stack>
-      <Stack.Screen name="index" />
-    </Stack>
-  );
+  return <Slot />;
 };
 
 export default function RootLayout() {
